@@ -13,6 +13,14 @@ class linkedlist{
         newNode.next = this.head
         this.head = newNode
     }
+    addlast(data){
+        const newNode = new node(data)
+        let temp = this.head
+        while(temp.next !== null){
+            temp = temp.next
+        }
+        temp.next = newNode
+    }
     deletefirst(){
         if(this.head === null){
             return
@@ -57,6 +65,8 @@ list.addFirst(2)
 list.addFirst(3)
 list.addFirst(4)
 list.addFirst(5)
+list.print()
+list.addlast(500)
 list.print()
 list.deletefirst()
 list.print()
