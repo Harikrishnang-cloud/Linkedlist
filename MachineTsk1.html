@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Colour Picker</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 100px;
+        transition: background-color 0.5s
+    }
+    button{
+        padding : 10px 20px;
+        font-size :16px;
+        border-radius:6px;
+        background-color: #8a4a4a;
+        color :white;
+        border:none;
+        cursor:pointer
+
+    }
+    #colorcode{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>Random Background Color</h1>
+    <button onclick="changeColor()"> Change Color</button>   
+    <p id="colorcode">Current Color:#ffffff</p>
+    <script>
+        function getRandomColor(){
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for(let i=0;i<6;i++){
+                color = color + letters[Math.floor(Math.random()*16)]
+            }
+            return color
+        }
+        function changeColor(){
+            const newcolor = getRandomColor()
+            document.body.style.backgroundColor = newcolor;
+            document.getElementById('colorcode').textContent = "Current color: "+newcolor
+        }
+    </script>
+</body>
+</html>

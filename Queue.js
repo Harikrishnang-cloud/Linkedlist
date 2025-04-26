@@ -1,3 +1,5 @@
+/* QUEUE */
+/*
 class queue{
     constructor(){
         this.data = []
@@ -25,7 +27,7 @@ class queue{
     }
 }
 function reverseQ(queue){
-    let stack = []
+    let stack = [];
     while(!queue.isEmpty()){
         stack.push(queue.dequeue())
     }
@@ -43,3 +45,5 @@ q.enqueue(13)
 console.log(q.print())
 reverseQ(q)
 console.log(q.print())
+*/
+
